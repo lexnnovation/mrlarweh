@@ -2,7 +2,8 @@ import React from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Bio from "./components/Projects";
+import Bio from "./components/Bio";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Navbar />
         <Projects />
         <Bio />
+        <Skills />
       </div>
     </div>
   );
