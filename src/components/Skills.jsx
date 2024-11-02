@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
-    <section>
-      <div></div>
+    <section id='skills'>
+      <div className='container mx-auto'>Ghanba</div>
     </section>
   );
 };
