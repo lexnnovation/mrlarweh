@@ -2,7 +2,7 @@ import { SKILLS } from "../constants";
 
 const Skills = () => {
   return (
-    <div className='container mx-auto' id='skills'>
+    <section className='container mx-auto' id='skills'>
       <h2 className='mt-20 mb-12 text-4xl font-semibold text-center'>Skills</h2>
       <div className='flex flex-col px-4 py-2 mx-2 text-3xl border rounded-3xl lg:px-20 border-stone-50/30'>
         {SKILLS.map((skill, index) => (
@@ -22,7 +22,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
