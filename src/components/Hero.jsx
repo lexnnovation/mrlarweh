@@ -1,6 +1,6 @@
 import React from "react";
 import { HERO } from "../constants";
-import carlImg from "../assets/carl.jpeg";
+import lexImg from "../assets/lex1.jpeg";
 const Hero = () => {
   return (
     <section className='flex flex-wrap items-center min-h-screen'>
@@ -17,10 +17,10 @@ const Hero = () => {
         <div className='flex justify-center'>
           <img
             className='rounded-3xl'
-            src={carlImg}
+            src={lexImg}
             alt={HERO.name}
-            width={550}
-            height={550}
+            width={650}
+            height={650}
           />
         </div>
       </div>
