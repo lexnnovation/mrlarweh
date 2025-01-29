@@ -59,7 +59,7 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    name: "Int. Speaker and Author Website ",
+    name: "International Speaker & Author Website ",
     description:
       "Built with WordPress and custom HTML and CSS for a personalized, responsive design.I developed Dr. Amanda Foo-Ryland's website, showcasing her work as a speaker, author, and coach. The site includes details about her background, books, and client testimonials.",
     image: projectImage3,
