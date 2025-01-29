@@ -20,19 +20,21 @@ const Projects = () => {
               className='object-cover w-full h-full transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 flex flex-col items-center justify-center text-white transition-opacity duration-500 opacity-0 backdrop-blur-lg group-hover:opacity-100'>
-              <h3 className='mb-2 text-xl'>{project.name}</h3>
+              <h3 className='mb-2 text-xl font-bold'>{project.name}</h3>
               <p className='p-4 mb-12'>{project.description}</p>
-              <a
-                href={project.githubLink}
-                target='_blank'
-                rel=' noopener noreferrer'
-                className='px-6 py-2 text-black bg-white rounded-full hover:bg-black hover:text-white hover:duration-700'
-              >
-                <div className='flex items-center'>
-                  <span>View on Github</span>
-                  <MdArrowOutward />
-                </div>
-              </a>
+              <div className='flex flex-col items-center justify-center gap-y-4'>
+                <a
+                  href={project.liveSite}
+                  target='_blank'
+                  rel=' noopener noreferrer'
+                  className='px-6 py-2 text-black bg-white rounded-full hover:bg-black hover:text-white hover:duration-700'
+                >
+                  <div className='flex items-center'>
+                    <span>View Website</span>
+                    <MdArrowOutward />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         ))}

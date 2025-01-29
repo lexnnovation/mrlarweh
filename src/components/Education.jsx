@@ -11,7 +11,7 @@ const Education = () => {
           className='p-4 mb-6 border rounded-xl border-stone-50/30'
         >
           <h3 className='text-xl font-semibold'>{edu.degree}</h3>
-          <p className='text-lg '>{edu.institution}</p>
+          <p className='text-sm '>{edu.institution}</p>
           <p className='text-sm text-stone-300'>{edu.duration}</p>
           <p className='mt-2'>{edu.description}</p>
         </div>

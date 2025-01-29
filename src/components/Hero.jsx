@@ -5,12 +5,13 @@ const Hero = () => {
   return (
     <section className='flex flex-wrap items-center min-h-screen'>
       <div className='w-full md:w-1/2'>
-        <h2 className='my-8 p-2 text-4xl font-bold md:text-5xl lg:text-[7rem]'>
-          {HERO.name}
-        </h2>
-        <p className='p-2 text-3xl tracking-tighter lg:text-4xl'>
+        <p className='p-2 mt-16 text-3xl tracking-tighter lg:text-4xl'>
           {HERO.greet}
         </p>
+        <h2 className=' p-2 text-6xl font-bold md:text-5xl lg:text-[7rem]'>
+          {HERO.name}
+        </h2>
+
         <p className='p-2 mb-8 text-xl'>{HERO.description}</p>
       </div>
       <div className='w-full md:w-1/2 lg:p-8'>
