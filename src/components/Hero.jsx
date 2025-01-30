@@ -1,10 +1,17 @@
 import React from "react";
 import { HERO } from "../constants";
 import lexImg from "../assets/lex1.jpeg";
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <section className='flex flex-wrap items-center min-h-screen'>
-      <div className='w-full md:w-1/2'>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2 }}
+        className='w-full md:w-1/2'
+      >
         <p className='p-2 mt-16 text-3xl tracking-tighter lg:text-4xl'>
           {HERO.greet}
         </p>
@@ -13,10 +20,18 @@ const Hero = () => {
         </h2>
 
         <p className='p-2 mb-8 text-xl'>{HERO.description}</p>
-      </div>
-      <div className='w-full md:w-1/2 lg:p-8'>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5, x: 500 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className='w-full md:w-1/2 lg:p-8'
+      >
         <div className='flex justify-center'>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
             className='rounded-3xl'
             src={lexImg}
             alt={HERO.name}
@@ -24,7 +39,7 @@ const Hero = () => {
             height={650}
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
