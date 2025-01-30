@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className='mt-20 mb-8'>
       <div className='flex items-center justify-center'>
-        <img src={logo} alt={"logo"} width={200} className='my-8' />
+        <img src={logo} alt={"logo"} width={200} className='my-4' />
       </div>
       <div className='flex items-center justify-center gap-4 '>
         {SOCIAL_MEDIA_LINKS.map((link, index) => (

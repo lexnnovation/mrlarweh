@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='flex flex-wrap items-center min-h-screen'>
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 2 }}
         className='w-full md:w-1/2'
