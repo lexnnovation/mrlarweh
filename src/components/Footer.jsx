@@ -1,5 +1,7 @@
 import logo from "../assets/logo.png";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
+import { motion } from "framer-motion";
+
 const Footer = () => {
   function getYear() {
     const today = new Date();
@@ -14,14 +16,17 @@ const Footer = () => {
       </div>
       <div className='flex items-center justify-center gap-4 '>
         {SOCIAL_MEDIA_LINKS.map((link, index) => (
-          <a
+          <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: index * 0.5 }}
             key={index}
             href={link.href}
             target='_blank'
             rel='noopener noreferrer'
           >
             {link.icon}
-          </a>
+          </motion.a>
         ))}
       </div>
 
