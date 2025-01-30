@@ -31,9 +31,9 @@ const Projects = () => {
               className='object-cover w-full h-full transition-transform duration-500 group-hover:scale-110'
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              // initial={{ opacity: 0 }}
+              // whileHover={{ opacity: 1 }}
+              // transition={{ duration: 1 }}
               className='absolute inset-0 flex flex-col items-center justify-center text-white transition-opacity duration-500 opacity-0 backdrop-blur-lg group-hover:opacity-100'
             >
               <h3 className='mb-2 text-xl font-bold'>{project.name}</h3>
