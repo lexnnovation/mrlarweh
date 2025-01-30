@@ -33,7 +33,7 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const HERO = {
-  name: "ALEXANDER TEYE",
+  name: "ALEXANDER LARWEH",
   greet: "Hello! I'm 👋🏻",
   description:
     "a skilled developer with a strong focus on both frontend and backend development, specializing in crafting beautiful, intuitive user interfaces and powerful server-side solutions. With a passion for turning ideas into dynamic, engaging web experiences, the goal is always to deliver seamless, high-performance solutions that balance creativity with technical excellence.",
