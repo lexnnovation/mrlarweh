@@ -36,7 +36,7 @@ export const HERO = {
   name: "ALEXANDER LARWEH",
   greet: "Hello! I'm 👋🏻",
   description:
-    "a skilled web developer specializing in intuitive user interfaces and robust backend solutions. Passionate about transforming ideas into high-performance, engaging web experiences with a balance of creativity and technical excellence.",
+    "a skilled web developer specialized in intuitive user interfaces and robust backend solutions. Passionate about transforming ideas into high-performance, engaging web experiences with a balance of creativity and technical excellence.",
 };
 
 export const PROJECTS = [
