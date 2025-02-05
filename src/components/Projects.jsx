@@ -33,7 +33,7 @@ const Projects = () => {
               <h3 className='pb-2 text-xl font-bold text-center'>
                 {project.name}
               </h3>
-              <p className=' pb-2 text-center max-w-[90%] sm:max-w-[90%] lg:max-w-[70%]'>
+              <p className=' pb-4 text-center max-w-[90%] sm:max-w-[90%] lg:max-w-[70%]'>
                 {project.description}
               </p>
               <div className='flex flex-col items-center justify-center transition-opacity duration-500 opacity-100 gap-y-4'>
