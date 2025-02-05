@@ -85,7 +85,7 @@ export const PROJECTS = [
     id: 6,
     name: "Portfolio Website",
     description:
-      "I developed a portfolio website using ReactJS, Tailwind CSS, Framer, and EmailJS. The site features a modern, responsive design, with an active contact form that allows seamless communication with visitors. It also showcases my web development skills and various projects, offering an interactive and user-friendly experience. The integration of Framer adds smooth animations, while EmailJS powers the contact form for efficient communication.",
+      "I built a portfolio website using ReactJS, Tailwind CSS, Framer Motion, and EmailJS. It features a modern, responsive design with smooth animations and an interactive user experience. The active contact form, powered by EmailJS, ensures seamless communication, while the site highlights my web development skills and projects.",
     image: projectImage6,
     githubLink: "https://github.com/lexnnovation/mrlarweh",
     liveSite: "https://lexnnovation.com",
