@@ -11,7 +11,7 @@ const WorkExperience = () => {
         transition={{ duration: 1 }}
         className='text-4xl font-semibold tracking-tighter text-center'
       >
-        WorkExperience
+        Professional Experience
       </motion.h2>
       <motion.div
         initial={{ opacity: 0 }}

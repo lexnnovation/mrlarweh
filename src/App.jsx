@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Bio from "./components/Bio";
 import Skills from "./components/Skills";
+import Skills1 from "./components/Skills1";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
@@ -16,11 +17,12 @@ const App = () => {
       <div className='container relative z-10 flex flex-col items-center p-4 mx-auto space-y-8'>
         <Hero />
         <Navbar />
+        <Skills />
         <Projects />
         <Bio />
-        <Skills />
+        {/* <Skills1 /> */}
         <WorkExperience />
-        <Education />
+        {/* <Education /> */}
         <Contact />
         <Footer />
       </div>

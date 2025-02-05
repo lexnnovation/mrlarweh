@@ -24,11 +24,11 @@ import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 
 export const NAVIGATION_LINKS = [
-  { label: "Projects", href: "#projects" },
-  { label: "Bio", href: "#bio" },
   { label: "Skills", href: "#skills" },
-  { label: "Work Experience", href: "#work" },
-  { label: "Education", href: "#education" },
+  { label: "Portfolio", href: "#projects" },
+  { label: "Bio", href: "#bio" },
+  { label: "Professional Experience", href: "#work" },
+  // { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -36,7 +36,7 @@ export const HERO = {
   name: "ALEXANDER LARWEH",
   greet: "Hello! I'm 👋🏻",
   description:
-    "a skilled developer with a strong focus on both frontend and backend development, specializing in crafting beautiful, intuitive user interfaces and powerful server-side solutions. With a passion for turning ideas into dynamic, engaging web experiences, the goal is always to deliver seamless, high-performance solutions that balance creativity with technical excellence.",
+    "a skilled web developer specializing in intuitive user interfaces and robust backend solutions. Passionate about transforming ideas into high-performance, engaging web experiences with a balance of creativity and technical excellence.",
 };
 
 export const PROJECTS = [
@@ -93,13 +93,48 @@ export const PROJECTS = [
 ];
 
 export const BIO = [
-  "Alex is a highly skilled web developer with a Computer Science degree from Ghana Communication Technology University in Accra, Ghana. Specializing in backend development, Alex’s primary focus is on PHP, using the powerful Laravel framework to build scalable, efficient, and robust applications. He is driven by a deep passion for coding and always eager to take on new challenges, tackling any hurdles that come his way with enthusiasm and determination.",
+  "Alex is a highly skilled web developer who is specialized in backend development, Alex’s primary focus is on JavaScript (React/Vue) on the frontend and PHP, using the powerful Laravel framework on the backend to build scalable, efficient, and robust applications. He is driven by a deep passion for coding and always eager to take on new challenges, tackling any hurdles that come his way with enthusiasm and determination.",
   "With experience in both front-end and back-end technologies, Alex is proficient in delivering dynamic, responsive websites and web applications. His hands-on experience with WordPress and custom development enables him to create tailored, user-friendly solutions for clients. Constantly seeking to improve and expand his skills, Alex embraces learning new technologies and refining his craft to stay at the cutting edge of web development.",
   "In his downtime, Alex enjoys photography, video editing, and listening to music, drawing inspiration from the world around him. If you're looking for a developer who's dedicated, adaptable, and ready to take on any challenge, Alex is the ideal collaborator and team player!",
   ,
 ];
 
 export const SKILLS = [
+  {
+    icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
+    name: "React",
+  },
+  {
+    icon: <RiTailwindCssFill className='text-4xl text-white lg:text-5xl' />,
+    name: "Tailwind CSS",
+  },
+  {
+    icon: <SiPhp className='text-4xl text-white lg:text-5xl' />,
+    name: "PHP",
+  },
+  {
+    icon: <SiLaravel className='text-4xl text-white lg:text-5xl' />,
+    name: "Laravel",
+  },
+  {
+    icon: <SiMysql className='text-4xl text-white lg:text-5xl' />,
+    name: "SQL",
+  },
+  {
+    icon: <FaWordpress className='text-4xl text-white lg:text-5xl' />,
+    name: "Wordpress",
+  },
+  {
+    icon: <FaShopify className='text-4xl text-white lg:text-5xl' />,
+    name: "Shopify",
+  },
+  {
+    icon: <FaGitAlt className='text-4xl text-white lg:text-5xl' />,
+    name: "Git",
+  },
+];
+
+export const SKILLS1 = [
   {
     icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
     name: "React",

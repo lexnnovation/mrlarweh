@@ -1,4 +1,4 @@
-import { SKILLS } from "../constants";
+import { SKILLS1 } from "../constants";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -28,8 +28,7 @@ const itemVariants = {
     },
   },
 };
-
-const Skills = () => {
+const Skills1 = () => {
   return (
     <section className='container mx-auto' id='skills'>
       <motion.h2
@@ -38,27 +37,29 @@ const Skills = () => {
         transition={{ duration: 1 }}
         className='mb-12 text-4xl font-semibold text-center '
       >
-        Skills
+        Old Skills
       </motion.h2>
       <motion.div
         initial='hidden'
         whileInView='visible'
         variants={containerVariants}
         viewport={{ once: true }}
-        className='flex flex-row items-center justify-center text-3xl'
+        className='flex flex-col px-4 py-2 mx-2 text-3xl border rounded-3xl lg:px-20 border-stone-50/30'
       >
-        {SKILLS.map((skill, index) => (
+        {SKILLS1.map((skill1, index) => (
           <motion.div
             variants={itemVariants}
             key={index}
-            className={`py-6 flex items-center justify-between`}
+            className={`py-6 flex items-center justify-between ${
+              index !== SKILLS1.length - 1 ? "border-b border-stone-50/30" : ""
+            }`}
           >
-            <div className='flex flex-col items-center justify-between'>
-              <div className='px-8 text-2xl'>{skill.icon}</div>
-              <h3 className='px-8 text-lg lg:text-xl'>{skill.name}</h3>
+            <div className='flex items-center'>
+              {skill1.icon}
+              <h3 className='px-6 text-lg lg:text-2xl'>{skill1.name}</h3>
             </div>
-            <div className='text-xl font-semibold '>
-              <span>{skill.experience}</span>
+            <div className='text-xl font-semibold lg:text-xl'>
+              <span>{skill1.experience}</span>
             </div>
           </motion.div>
         ))}
@@ -67,4 +68,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills1;
