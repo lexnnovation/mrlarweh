@@ -45,21 +45,18 @@ const Skills = () => {
         whileInView='visible'
         variants={containerVariants}
         viewport={{ once: true }}
-        className='flex flex-row items-center justify-center text-3xl'
+        className='grid grid-cols-2 gap-6 text-3xl sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'
       >
         {SKILLS.map((skill, index) => (
           <motion.div
             variants={itemVariants}
             key={index}
-            className={`py-6 flex items-center justify-between`}
+            className='flex flex-col items-center py-6 text-center'
           >
-            <div className='flex flex-col items-center justify-between'>
-              <div className='px-8 text-2xl'>{skill.icon}</div>
-              <h3 className='px-8 text-lg lg:text-xl'>{skill.name}</h3>
-            </div>
-            <div className='text-xl font-semibold '>
-              <span>{skill.experience}</span>
-            </div>
+            <div className='px-4 text-2xl sm:px-6 md:px-8'>{skill.icon}</div>
+            <h3 className='px-4 text-base sm:text-lg md:text-xl'>
+              {skill.name}
+            </h3>
           </motion.div>
         ))}
       </motion.div>
