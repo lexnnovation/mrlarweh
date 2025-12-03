@@ -14,7 +14,7 @@ import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
-import { RiReactjsLine } from "react-icons/ri";
+import { RiJavascriptFill, RiReactjsLine } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiPhp } from "react-icons/si";
 import { SiLaravel } from "react-icons/si";
@@ -22,6 +22,7 @@ import { SiMysql } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 
 export const NAVIGATION_LINKS = [
   { label: "Skills", href: "#skills" },
@@ -101,6 +102,19 @@ export const BIO = [
 
 export const SKILLS = [
   {
+    icon: <FaPython className='text-4xl text-white lg:text-5xl' />,
+    name: "Python",
+  },
+
+  {
+    icon: <SiLaravel className='text-4xl text-white lg:text-5xl' />,
+    name: "Laravel",
+  },
+  {
+    icon: <RiJavascriptFill className='text-4xl text-white lg:text-5xl' />,
+    name: "JavaScript",
+  },
+  {
     icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
     name: "React",
   },
@@ -108,26 +122,20 @@ export const SKILLS = [
     icon: <RiTailwindCssFill className='text-4xl text-white lg:text-5xl' />,
     name: "Tailwind CSS",
   },
-  {
-    icon: <SiPhp className='text-4xl text-white lg:text-5xl' />,
-    name: "PHP",
-  },
-  {
-    icon: <SiLaravel className='text-4xl text-white lg:text-5xl' />,
-    name: "Laravel",
-  },
+
   {
     icon: <SiMysql className='text-4xl text-white lg:text-5xl' />,
     name: "SQL",
   },
   {
-    icon: <FaWordpress className='text-4xl text-white lg:text-5xl' />,
-    name: "Wordpress",
-  },
-  {
     icon: <FaShopify className='text-4xl text-white lg:text-5xl' />,
     name: "Shopify",
   },
+  {
+    icon: <FaWordpress className='text-4xl text-white lg:text-5xl' />,
+    name: "Wordpress",
+  },
+
   {
     icon: <FaGitAlt className='text-4xl text-white lg:text-5xl' />,
     name: "Git",
@@ -135,6 +143,11 @@ export const SKILLS = [
 ];
 
 export const SKILLS1 = [
+  {
+    icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
+    name: "React",
+    experience: "2+ years",
+  },
   {
     icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
     name: "React",
