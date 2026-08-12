@@ -4,6 +4,15 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import ResumeMenu from "./ResumeMenu";
 
+const NAV_NUMBER_COLORS = [
+  "text-red-500",
+  "text-blue-500",
+  "text-green-500",
+  "text-amber-500",
+  "text-purple-500",
+  "text-pink-500",
+];
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -41,7 +50,9 @@ const Navbar = () => {
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
-                  <span className='text-accent-amber'>{index}.</span>{" "}
+                  <span className={NAV_NUMBER_COLORS[index % NAV_NUMBER_COLORS.length]}>
+                    {index}.
+                  </span>{" "}
                   {item.label}
                 </a>
               </li>
@@ -80,7 +91,9 @@ const Navbar = () => {
                       className='block text-text'
                       onClick={(e) => handleLinkClick(e, item.href)}
                     >
-                      <span className='text-accent-amber'>{index}.</span>{" "}
+                      <span className={NAV_NUMBER_COLORS[index % NAV_NUMBER_COLORS.length]}>
+                        {index}.
+                      </span>{" "}
                       {item.label}
                     </a>
                   </li>
