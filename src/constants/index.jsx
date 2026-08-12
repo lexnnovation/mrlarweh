@@ -221,7 +221,7 @@ export const EXPERIENCES = [
       "Building backend AI automation systems using Python, FastAPI, n8n, OpenAI APIs, PostgreSQL, and Supabase. Designing multi-step workflows connecting business processes, customer interactions, APIs, and databases. Integrating LLM-powered features into practical workflows, using Supabase and vector-based retrieval to support RAG-style contextual responses, and debugging automation behavior through log inspection and workflow execution review.",
   },
   {
-    title: "Project Lead / Web Developer",
+    title: "Software Engineer",
     company: "Enokay69.com, Accra, Ghana",
     duration: "November 2022 - December 2025",
     description:
