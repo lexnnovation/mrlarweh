@@ -20,14 +20,14 @@ const STACK_LINES = [
 
 const Hero = () => {
   return (
-    <section className='flex flex-wrap items-center min-h-screen'>
+    <section className='flex flex-wrap items-center min-h-[95vh] lg:min-h-0 lg:pt-20 lg:pb-28'>
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         className='w-full md:w-1/2'
       >
-        <p className='p-2 mt-16 text-2xl tracking-tighter lg:text-3xl'>
+        <p className='p-2 mt-28 text-2xl tracking-tighter lg:mt-16 lg:text-3xl'>
           {HERO.greet}
         </p>
         <h2 className='p-2 text-5xl font-extrabold font-hero md:text-5xl lg:text-[5.5rem] leading-[1.05]'>
