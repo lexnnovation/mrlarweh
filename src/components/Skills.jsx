@@ -1,62 +1,66 @@
 import { SKILLS } from "../constants";
 import { motion } from "framer-motion";
+import WindowCard from "./WindowCard";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-
     transition: {
-      duration: 1,
-      staggerChildren: 0.5,
+      duration: 0.8,
+      staggerChildren: 0.15,
     },
   },
 };
 
 const itemVariants = {
-  hidden: {
-    opacity: 0,
-    x: -20,
-  },
-
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const Skills = () => {
   return (
-    <section className='container mx-auto' id='skills'>
-      <motion.h2
+    <section className='w-full max-w-5xl' id='skills'>
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className='mb-12 text-4xl font-semibold text-center '
+        className='flex items-center gap-3 mb-10'
       >
-        Skills
-      </motion.h2>
+        <span className='font-mono text-lg text-accent-amber'>01.</span>
+        <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
+          Skills
+        </h2>
+      </motion.div>
+
       <motion.div
         initial='hidden'
         whileInView='visible'
         variants={containerVariants}
         viewport={{ once: true }}
-        className='grid grid-cols-2 gap-6 text-3xl sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'
+        className='grid grid-cols-1 gap-6 md:grid-cols-2'
       >
-        {SKILLS.map((skill, index) => (
-          <motion.div
-            variants={itemVariants}
-            key={index}
-            className='flex flex-col items-center py-6 text-center'
-          >
-            <div className='px-4 text-2xl sm:px-6 md:px-8'>{skill.icon}</div>
-            <h3 className='px-4 text-base sm:text-lg md:text-xl'>
-              {skill.name}
-            </h3>
+        {SKILLS.map((group) => (
+          <motion.div variants={itemVariants} key={group.category}>
+            <WindowCard title={group.file}>
+              <div className='p-5'>
+                <p className='mb-4 font-mono text-xs tracking-wide uppercase text-text-muted'>
+                  {group.category}
+                </p>
+                <div className='flex flex-wrap gap-2'>
+                  {group.items.map((item) => (
+                    <span
+                      key={item.name}
+                      className='flex items-center gap-2 px-3 py-1.5 text-sm rounded-md bg-bg border border-border text-text'
+                    >
+                      <span className='text-accent-teal'>{item.icon}</span>
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </WindowCard>
           </motion.div>
         ))}
       </motion.div>

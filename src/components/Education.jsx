@@ -1,39 +1,49 @@
-import React from "react";
 import { EDUCATION } from "../constants";
 import { motion } from "framer-motion";
+import WindowCard from "./WindowCard";
 
 const Education = () => {
   return (
-    <section className='py-8' id='education'>
-      <motion.h2
+    <section className='w-full max-w-5xl pt-20' id='education'>
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className='text-4xl font-semibold text-center'
+        className='flex items-center gap-3 mb-10'
       >
-        Education
-      </motion.h2>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className='p-10 space-y-10'
-      >
+        <span className='font-mono text-lg text-accent-amber'>05.</span>
+        <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
+          Education
+        </h2>
+      </motion.div>
+
+      <div className='space-y-6'>
         {EDUCATION.map((edu, index) => (
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: index * 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
             key={index}
-            className='p-4 mb-6 border rounded-xl border-stone-50/30'
           >
-            <h3 className='text-xl font-semibold'>{edu.degree}</h3>
-            <p className='text-sm '>{edu.institution}</p>
-            <p className='text-sm text-stone-300'>{edu.duration}</p>
-            <p className='mt-2'>{edu.description}</p>
+            <WindowCard title='~/education/gctu.json'>
+              <div className='p-6'>
+                <p className='mb-2 font-mono text-xs text-accent-teal'>
+                  {edu.duration}
+                </p>
+                <h3 className='text-xl font-semibold text-text'>
+                  {edu.degree}
+                </h3>
+                <p className='mb-3 text-sm text-text-muted'>
+                  {edu.institution}
+                </p>
+                <p className='text-sm leading-relaxed text-text-muted'>
+                  {edu.description}
+                </p>
+              </div>
+            </WindowCard>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

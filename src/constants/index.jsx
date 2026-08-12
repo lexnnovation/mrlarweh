@@ -1,11 +1,4 @@
-import {
-  FaXTwitter,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaDiscord,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 import projectImage1 from "../assets/project1.jpeg";
 import projectImage2 from "../assets/project2.jpeg";
@@ -15,10 +8,21 @@ import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
 import { RiJavascriptFill, RiReactjsLine } from "react-icons/ri";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiPhp } from "react-icons/si";
-import { SiLaravel } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import {
+  SiPhp,
+  SiLaravel,
+  SiMysql,
+  SiOpenai,
+  SiFastapi,
+  SiPostgresql,
+  SiSupabase,
+  SiDocker,
+  SiAnthropic,
+  SiHuggingface,
+  SiLangchain,
+  SiVuedotjs,
+} from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
@@ -26,234 +30,223 @@ import { FaPython } from "react-icons/fa";
 
 export const NAVIGATION_LINKS = [
   { label: "Skills", href: "#skills" },
-  { label: "Portfolio", href: "#projects" },
+  { label: "Projects", href: "#projects" },
   { label: "Bio", href: "#bio" },
-  { label: "Professional Experience", href: "#work" },
-  // { label: "Education", href: "#education" },
+  { label: "Experience", href: "#work" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const RESUMES = {
+  aiEngineer: "/resume/alex-larweh-ai-engineer-resume.pdf",
+  softwareEngineer: "/resume/alex-larweh-software-engineer-resume.pdf",
+};
 
 export const HERO = {
   name: "ALEXANDER LARWEH",
   greet: "Hello! I'm 👋🏻",
+  role: "AI Engineer & Software Engineer",
   description:
-    "a skilled web developer specialized in intuitive user interfaces and robust backend solutions. Passionate about transforming ideas into high-performance, engaging web experiences with a balance of creativity and technical excellence.",
+    "I build AI-powered backend systems and full-stack products — from LLM-driven automation workflows to production web applications. 5+ years shipping code across Python/FastAPI, React, and PHP/Laravel, with a current focus on agentic systems, RAG pipelines, and workflow automation.",
 };
 
 export const PROJECTS = [
   {
     id: 1,
+    type: "web",
     name: "Sports Prediction Hub (Enokay69.com)",
     description:
       "I created Enokay69.com, a sports prediction platform offering free and VIP betting tips with features like user authentication, Telegram integration, and responsive design. The website was built using PHP Laravel for backend functionality and Bootstrap for a sleek, mobile-friendly front end. This combination ensures a scalable, secure, and user-focused experience.",
     image: projectImage1,
     githubLink: "https://github.com/lexnnovation/k69_v2",
     liveSite: "https://www.enokay69.com/",
+    tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
   },
   {
     id: 2,
+    type: "web",
     name: "Business Website (levotude.com)",
     description:
       "I developed Levotude.com, a business development consulting website specializing in market entry and growth strategies for small and medium-sized enterprises in Africa. The site features detailed services, methodology, and contact information. It was built using WordPress with custom HTML and CSS for a tailored, responsive design.",
     image: projectImage2,
     liveSite: "https://www.levotude.com/",
+    tags: ["WordPress", "HTML/CSS"],
   },
   {
     id: 3,
-    name: "International Speaker & Author Website ",
+    type: "web",
+    name: "International Speaker & Author Website",
     description:
-      "Built with WordPress and custom HTML and CSS for a personalized, responsive design.I developed Dr. Amanda Foo-Ryland's website, showcasing her work as a speaker, author, and coach. The site includes details about her background, books, and client testimonials.",
+      "Built with WordPress and custom HTML and CSS for a personalized, responsive design. I developed Dr. Amanda Foo-Ryland's website, showcasing her work as a speaker, author, and coach. The site includes details about her background, books, and client testimonials.",
     image: projectImage3,
     liveSite: "https://dramandafoo-ryland.com/",
+    tags: ["WordPress", "HTML/CSS"],
   },
   {
     id: 4,
+    type: "web",
     name: "Business Website (calonhapus.co.uk)",
     description:
       "CalonHapus.co.uk, a personal coaching website based in the United Kingdom offering hypnotherapy and NLP services to help clients achieve personal transformation. The site features detailed information about services, a blog, and contact details. It was built using WordPress with custom HTML and CSS for a tailored, responsive design.",
     image: projectImage4,
     liveSite: "https://calonhapus.co.uk/",
+    tags: ["WordPress", "HTML/CSS"],
   },
   {
     id: 5,
+    type: "web",
     name: "Neural Coding Training Website",
     description:
       "I developed YourLifeLiveIt.com, a personal development platform offering Neural Coding® techniques to help individuals eliminate negative habits and beliefs. The website features information about their services, online and live courses, and coaching opportunities. It was built using Shopify, providing a user-friendly interface and secure payment processing.",
     image: projectImage5,
     liveSite: "https://yourlifeliveit.com/",
+    tags: ["Shopify"],
   },
   {
     id: 6,
+    type: "web",
     name: "Portfolio Website",
     description:
       "I built a portfolio website using ReactJS, Tailwind CSS, Framer Motion, and EmailJS. It features a modern, responsive design with smooth animations and an interactive user experience. The active contact form, powered by EmailJS, ensures seamless communication, while the site highlights my web development skills and projects.",
     image: projectImage6,
     githubLink: "https://github.com/lexnnovation/mrlarweh",
     liveSite: "https://lexnnovation.com",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    id: 7,
+    type: "ai",
+    name: "Production AI Email Support System",
+    description:
+      "An AI email support system with FastAPI as the backend logic layer and n8n for workflow orchestration. Integrates OpenAI API processing, routing logic, and business-specific response validation to reduce manual response work and make support handling scalable. Validated through backend review, workflow checks, and production deployment testing.",
+    githubLink: "https://github.com/lexnnovation",
+    tags: ["Python", "FastAPI", "n8n", "OpenAI API"],
+  },
+  {
+    id: 8,
+    type: "ai",
+    name: "AI WhatsApp Receptionist",
+    description:
+      "An AI-powered WhatsApp assistant for customer inquiries and business workflow automation. Uses RAG-style contextual response patterns backed by Supabase vector storage for retrieval, with automated replies, payment-processing workflows, and agent-like conversation flow.",
+    githubLink: "https://github.com/lexnnovation",
+    tags: ["Python", "RAG", "Supabase", "WhatsApp API"],
   },
 ];
 
 export const BIO = [
-  "Alex is a highly skilled web developer who is specialized in backend development, Alex’s primary focus is on JavaScript (React/Vue) on the frontend and PHP, using the powerful Laravel framework on the backend to build scalable, efficient, and robust applications. He is driven by a deep passion for coding and always eager to take on new challenges, tackling any hurdles that come his way with enthusiasm and determination.",
-  "With experience in both front-end and back-end technologies, Alex is proficient in delivering dynamic, responsive websites and web applications. His hands-on experience with WordPress and custom development enables him to create tailored, user-friendly solutions for clients. Constantly seeking to improve and expand his skills, Alex embraces learning new technologies and refining his craft to stay at the cutting edge of web development.",
-  "In his downtime, Alex enjoys photography, video editing, and listening to music, drawing inspiration from the world around him. If you're looking for a developer who's dedicated, adaptable, and ready to take on any challenge, Alex is the ideal collaborator and team player!",
-  ,
+  "I'm an AI Engineer and Software Engineer with 5+ years of code-heavy experience across full-stack development, backend systems, and production workflow automation. Right now I'm building AI-powered backend systems — Python, FastAPI, n8n, OpenAI APIs, PostgreSQL, and Supabase — designing multi-step workflows that connect business processes, LLM integrations, and databases into reliable, production-ready products.",
+  "My background spans both sides of the stack: React/Vue on the frontend, PHP/Laravel and FastAPI on the backend, with hands-on experience shipping and maintaining real client applications in WordPress, Shopify, and custom code. I care about debugging things properly — inspecting logs, tracing workflow failures, and validating behavior before calling something done.",
+  "Outside of work, I enjoy photography, video editing, and listening to music, drawing inspiration from the world around me. If you're looking for an engineer who's dedicated, adaptable, and ready to take on any challenge — AI systems or full-stack web — I'm the ideal collaborator and team player.",
 ];
 
 export const SKILLS = [
   {
-    icon: <FaPython className='text-4xl text-white lg:text-5xl' />,
-    name: "Python",
-  },
-
-  {
-    icon: <SiLaravel className='text-4xl text-white lg:text-5xl' />,
-    name: "Laravel",
-  },
-  {
-    icon: <RiJavascriptFill className='text-4xl text-white lg:text-5xl' />,
-    name: "JavaScript",
+    category: "AI Engineering",
+    file: "ai-engineering.json",
+    items: [
+      { icon: <SiOpenai />, name: "OpenAI API" },
+      { icon: <SiAnthropic />, name: "Claude" },
+      { icon: <SiLangchain />, name: "LangChain" },
+      { icon: <SiHuggingface />, name: "Hugging Face" },
+    ],
   },
   {
-    icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
-    name: "React",
+    category: "Backend",
+    file: "backend.json",
+    items: [
+      { icon: <FaPython />, name: "Python" },
+      { icon: <SiFastapi />, name: "FastAPI" },
+      { icon: <SiLaravel />, name: "Laravel" },
+      { icon: <SiPhp />, name: "PHP" },
+    ],
   },
   {
-    icon: <RiTailwindCssFill className='text-4xl text-white lg:text-5xl' />,
-    name: "Tailwind CSS",
-  },
-
-  {
-    icon: <SiMysql className='text-4xl text-white lg:text-5xl' />,
-    name: "SQL",
-  },
-  {
-    icon: <FaShopify className='text-4xl text-white lg:text-5xl' />,
-    name: "Shopify",
+    category: "Frontend",
+    file: "frontend.json",
+    items: [
+      { icon: <RiReactjsLine />, name: "React" },
+      { icon: <RiNextjsFill />, name: "Next.js" },
+      { icon: <SiVuedotjs />, name: "Vue.js" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+    ],
   },
   {
-    icon: <FaWordpress className='text-4xl text-white lg:text-5xl' />,
-    name: "Wordpress",
-  },
-
-  {
-    icon: <FaGitAlt className='text-4xl text-white lg:text-5xl' />,
-    name: "Git",
-  },
-];
-
-export const SKILLS1 = [
-  {
-    icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
-    name: "React",
-    experience: "2+ years",
+    category: "Data",
+    file: "data.json",
+    items: [
+      { icon: <SiPostgresql />, name: "PostgreSQL" },
+      { icon: <SiSupabase />, name: "Supabase" },
+      { icon: <SiMysql />, name: "MySQL / SQL" },
+    ],
   },
   {
-    icon: <RiReactjsLine className='text-4xl text-white lg:text-5xl' />,
-    name: "React",
-    experience: "2+ years",
-  },
-  {
-    icon: <RiTailwindCssFill className='text-4xl text-white lg:text-5xl' />,
-    name: "Tailwind CSS",
-    experience: "2+ year",
-  },
-  {
-    icon: <SiPhp className='text-4xl text-white lg:text-5xl' />,
-    name: "PHP",
-    experience: "3+ years",
-  },
-  {
-    icon: <SiLaravel className='text-4xl text-white lg:text-5xl' />,
-    name: "Laravel",
-    experience: "2+ year",
-  },
-  {
-    icon: <SiMysql className='text-4xl text-white lg:text-5xl' />,
-    name: "SQL",
-    experience: "2+ years",
-  },
-  {
-    icon: <FaWordpress className='text-4xl text-white lg:text-5xl' />,
-    name: "Wordpress",
-    experience: "4+ year",
-  },
-  {
-    icon: <FaShopify className='text-4xl text-white lg:text-5xl' />,
-    name: "Shopify",
-    experience: "2+ year",
-  },
-  {
-    icon: <FaGitAlt className='text-4xl text-white lg:text-5xl' />,
-    name: "Git Verison Control",
-    experience: "4+ year",
+    category: "Automation & Tools",
+    file: "tools.json",
+    items: [
+      { icon: <FaGitAlt />, name: "Git" },
+      { icon: <SiDocker />, name: "Docker" },
+      { icon: <FaWordpress />, name: "WordPress" },
+      { icon: <FaShopify />, name: "Shopify" },
+    ],
   },
 ];
 
 export const EXPERIENCES = [
   {
-    title: "Project Lead (Web Developer)",
-    company: "Enokay69.com",
-    duration: "November 2022 - Present",
+    title: "AI Automation Engineer",
+    company: "Kioobi SRL, Italy",
+    duration: "January 2026 - Present",
     description:
-      "Led web development project from concept to completion, ensuring they are delivered on time and within budget.  Work closely with other developers, cyber security expects and stakeholders to translate requirements and objectives into technical specifications and solutions.  Utilize PHP Laravel framework to build and maintain scalable and robust web applications.  Implement responsive and user-friendly interfaces using Bootstrap, HTML, CSS, and JavaScript.  Design and manage databases using MySQL, ensuring efficient data storage and retrieval.  Integrate third-party APIs and services to enhance the functionality of web applications....",
+      "Building backend AI automation systems using Python, FastAPI, n8n, OpenAI APIs, PostgreSQL, and Supabase. Designing multi-step workflows connecting business processes, customer interactions, APIs, and databases. Integrating LLM-powered features into practical workflows, using Supabase and vector-based retrieval to support RAG-style contextual responses, and debugging automation behavior through log inspection and workflow execution review.",
+  },
+  {
+    title: "Project Lead / Web Developer",
+    company: "Enokay69.com, Accra, Ghana",
+    duration: "November 2022 - December 2025",
+    description:
+      "Led full-stack web development projects from requirements gathering through delivery, maintenance, and support. Built and maintained Laravel applications using PHP, JavaScript, Bootstrap, HTML, CSS, and MySQL. Designed backend logic, database structures, and API integrations, and applied security, debugging, analytics, and performance practices to improve application reliability.",
   },
   {
     title: "IT Support Analyst",
-    company: "Betika Ghana",
-    duration: "July 2023 - June 2024",
+    company: "Betika Ghana, Accra, Ghana",
+    duration: "September 2020 - July 2024",
     description:
-      "Provide first-line support to users experiencing technical issues with hardware, software, and network systems.  Provide and respond to support requests via phone, email, or in person, and log incidents and service requests in a tracking system.  Diagnose and troubleshoot hardware and software issues, providing timely resolution or escalation to higher-level support if necessary.   Assist users in understanding and effectively using various IT resources and applications like Zendesk, Free PBX (Asterisk PBX) and N-Computing.  Implement and enforce IT security policies and procedures to protect organizational data and systems....",
+      "Provided first-line technical support for hardware, software, network, and business application issues. Diagnosed and resolved technical problems, supported systems including Zendesk, FreePBX/Asterisk PBX, and NComputing, and built practical experience in structured troubleshooting and operational reliability.",
   },
   {
-    title: "Creative Lead",
-    company: "Betika Ghana",
-    duration: "September 2020 - July 2023",
+    title: "Frontend Developer / Graphic & Product Designer",
+    company: "GoDropping Ghana Ltd, Accra, Ghana",
+    duration: "2019 - 2020",
     description:
-      "Conceptualizing and creating visual designs to convey marketing messages effectively.  Designing layouts for various mediums such as print publications, websites, and digital media.  Editing and enhancing images using software like Adobe Photoshop and Adobe Illustrator.  Producing designs for print production, ensuring quality and color accuracy.  Creating original artwork or graphics to complement designs....",
+      "Designed landing pages and email templates using HTML, CSS, and JavaScript. Identified UI/UX issues in company mobile and web applications, manually tested websites and apps, and prepared reports for the development team.",
   },
 ];
 
 export const EDUCATION = [
   {
     degree: "Bachelor of Science in Computer Science",
-    institution: "Ghana Communication Technology University",
+    institution: "Ghana Communication Technology University (GCTU)",
     duration: "January 2021 - June 2024",
     description:
-      "The Ghana Communication Technology University instilled in Alex Larweh a deep understanding of core computer science principles, including algorithms, data structures, and software engineering. The academic environment fostered his knowledge of databases, operating systems, and networking, providing him with a solid foundation in both theory and practice. Through rigorous coursework and projects, Alex developed strong problem-solving skills and an appreciation for the fundamentals of algorithm design. Graduating with honors, the university’s focus on innovation and critical thinking continues to inspire his passion for advancing in the tech industry.",
+      "Core computer science principles including algorithms, data structures, and software engineering, with a foundation in databases, operating systems, and networking. Graduated with honors, with a focus on innovation and critical thinking that continues to inform how I approach engineering problems today.",
   },
-  // {
-  //   degree: "Bachelor of Science in Information Technology",
-  //   institution: "University of California, Berkeley",
-  //   duration: "September 2008 - June 2012",
-  //   description:
-  //     "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
-  // },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
-  // {
-  //   href: "https://x.com/",
-  //   icon: <FaFacebook fontSize={25} className='hover:opacity-80' />,
-  // },
-  // {
-  //   href: "https://x.com/",
-  //   icon: <FaDiscord fontSize={25} className='hover:opacity-80' />,
-  // },
-  // {
-  //   href: "https://x.com/",
-  //   icon: <FaInstagram fontSize={25} className='hover:opacity-80' />,
-  // },
   {
-    href: "https://x.com/lexnnovation",
-    icon: <FaXTwitter fontSize={25} className='hover:opacity-80' />,
+    href: "https://www.linkedin.com/in/alex-larweh-5143b093/",
+    icon: <FaLinkedin fontSize={22} />,
+    label: "LinkedIn",
   },
   {
     href: "https://github.com/lexnnovation",
-    icon: <FaGithub fontSize={25} className='hover:opacity-80' />,
+    icon: <FaGithub fontSize={22} />,
+    label: "GitHub",
   },
   {
-    href: "https://www.linkedin.com/in/alex-larweh-5143b093/",
-    icon: <FaLinkedin fontSize={25} className='hover:opacity-80' />,
+    href: "https://x.com/lexnnovation",
+    icon: <FaXTwitter fontSize={22} />,
+    label: "X",
   },
 ];

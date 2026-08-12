@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { HERO, NAVIGATION_LINKS } from "../constants";
-import logo from "../assets/logo.png";
+import { useState } from "react";
+import { NAVIGATION_LINKS } from "../constants";
 import { FaTimes, FaBars } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
+import ResumeMenu from "./ResumeMenu";
 
 const Navbar = () => {
-  const [IsMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!IsMobileMenuOpen);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -25,70 +24,72 @@ const Navbar = () => {
     }
     setIsMobileMenuOpen(false);
   };
+
   return (
     <div>
-      <nav className='fixed left-0 right-0 z-50 top-4'>
+      <nav className='fixed left-0 right-0 z-50 top-4 px-4'>
         {/* Desktop Menu */}
-        <div className='items-center justify-center hidden max-w-2xl py-3 mx-auto border rounded-lg border-stone-50/30 bg-black/20 backdrop-blur-lg lg:flex'>
-          <div className='flex items-center justify-between gap-6'>
-            <div>
-              <a href='#'>
-                <img src={logo} alt={HERO.name} width={150} />
-              </a>
+        <div className='items-center justify-between hidden max-w-4xl gap-6 px-6 py-3 mx-auto border rounded-xl border-border bg-surface/80 backdrop-blur-lg lg:flex'>
+          <a href='#' className='font-mono text-lg font-medium text-text'>
+            alex<span className='text-accent-amber'>.</span>larweh
+          </a>
+          <ul className='flex items-center gap-5 font-mono text-sm'>
+            {NAVIGATION_LINKS.map((item, index) => (
+              <li key={index}>
+                <a
+                  className='text-text-muted hover:text-accent-amber transition-colors'
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item.href)}
+                >
+                  <span className='text-accent-teal'>
+                    0{index + 1}.
+                  </span>{" "}
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className='flex items-center gap-3'>
+            <ResumeMenu />
+            <ThemeToggle />
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className='rounded-xl border border-border bg-surface/90 backdrop-blur-md lg:hidden'>
+          <div className='flex items-center justify-between px-4 py-3'>
+            <a href='#' className='font-mono text-base font-medium text-text'>
+              alex<span className='text-accent-amber'>.</span>larweh
+            </a>
+            <div className='flex items-center gap-2'>
+              <ThemeToggle />
+              <button
+                className='flex items-center justify-center w-9 h-9 rounded-lg border border-border text-text focus:outline-none'
+                onClick={toggleMobileMenu}
+                aria-label='Toggle menu'
+              >
+                {isMobileMenuOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
+              </button>
             </div>
-            <div>
-              <ul className='flex items-center gap-4'>
+          </div>
+          {isMobileMenuOpen && (
+            <div className='px-4 pb-6'>
+              <ul className='flex flex-col gap-4 mb-6 font-mono text-base'>
                 {NAVIGATION_LINKS.map((item, index) => (
                   <li key={index}>
                     <a
-                      className='text-sm hover:text-yellow-400'
                       href={item.href}
+                      className='block text-text'
                       onClick={(e) => handleLinkClick(e, item.href)}
                     >
+                      <span className='text-accent-teal'>0{index + 1}.</span>{" "}
                       {item.label}
                     </a>
                   </li>
                 ))}
               </ul>
+              <ResumeMenu stacked />
             </div>
-          </div>
-        </div>
-        {/* Mobile Menu */}
-
-        <div className='rounded-lg backdrop-blur-md lg:hidden'>
-          <div className='flex items-center justify-between'>
-            <div>
-              <a href='#'>
-                <img src={logo} alt='logo' width={150} className='pl-4 m-2' />
-              </a>
-            </div>
-            <div className='flex items-center'>
-              <button
-                className='focus:outline-none lg:hidden'
-                onClick={toggleMobileMenu}
-              >
-                {IsMobileMenuOpen ? (
-                  <FaTimes className='w-5 h-6 m-2 mx-4' />
-                ) : (
-                  <FaBars className='w-5 h-6 m-2 mx-4' />
-                )}
-              </button>
-            </div>
-          </div>
-          {IsMobileMenuOpen && (
-            <ul className='flex flex-col gap-4 mt-4 ml-4 backdrop-blur-4xl'>
-              {NAVIGATION_LINKS.map((item, index) => (
-                <li className='pl-4 mb-8' key={index}>
-                  <a
-                    href={item.href}
-                    className='block w-full text-lg'
-                    onClick={(e) => handleLinkClick(e, item.href)}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
           )}
         </div>
       </nav>

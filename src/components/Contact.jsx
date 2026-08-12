@@ -55,7 +55,7 @@ const Contact = () => {
           formData,
           "VZ4mYWSe-8u6O9DEG"
         )
-        .then((response) => {
+        .then(() => {
           toast.success("Message sent successfully!");
           setFormData({
             name: "",
@@ -73,24 +73,27 @@ const Contact = () => {
     }
   };
   return (
-    <div className='p-4 lg:w-3/4' id='contact'>
+    <div className='w-full max-w-2xl pt-20' id='contact'>
       <Toaster />
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className='my-8 text-4xl font-semibold tracking-tighter text-center'
+        className='flex items-center gap-3 mb-10'
       >
-        Let's Connect
-      </motion.h2>
+        <span className='font-mono text-lg text-accent-amber'>06.</span>
+        <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
+          Let&apos;s Connect
+        </h2>
+      </motion.div>
       <motion.form
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.7 }}
+        transition={{ duration: 1, delay: 0.3 }}
         onSubmit={handleSubmit}
       >
-        <div className='flex mb-4 space-x-4'>
-          <div className='lg:w-1/2'>
+        <div className='flex flex-col gap-4 mb-4 sm:flex-row'>
+          <div className='sm:w-1/2'>
             <input
               type='text'
               name='name'
@@ -98,19 +101,19 @@ const Contact = () => {
               value={formData.name}
               placeholder='Name'
               onChange={handleChange}
-              className='w-full px-3 py-2 mb-4 text-sm bg-transparent border rounded-lg appearance-none border-stone-50/30 focus:border-stone-400 focus:outline-none'
+              className='w-full px-3 py-2.5 text-sm bg-surface border rounded-lg appearance-none border-border text-text placeholder:text-text-muted focus:border-accent-amber focus:outline-none'
             />
             {errors.name && (
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className='text-sm text-rose-800'
+                className='mt-1 text-sm text-rose-500'
               >
                 {errors.name}
               </motion.p>
             )}
           </div>
-          <div className='lg:w-1/2'>
+          <div className='sm:w-1/2'>
             <input
               type='email'
               name='email'
@@ -118,13 +121,13 @@ const Contact = () => {
               value={formData.email}
               placeholder='Email'
               onChange={handleChange}
-              className='w-full px-3 py-2 mb-4 text-sm bg-transparent border rounded-lg appearance-none border-stone-50/30 focus:border-stone-400 focus:outline-none'
+              className='w-full px-3 py-2.5 text-sm bg-surface border rounded-lg appearance-none border-border text-text placeholder:text-text-muted focus:border-accent-amber focus:outline-none'
             />
             {errors.email && (
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className='text-sm text-rose-800'
+                className='mt-1 text-sm text-rose-500'
               >
                 {errors.email}
               </motion.p>
@@ -138,14 +141,14 @@ const Contact = () => {
             value={formData.message}
             placeholder='Message'
             onChange={handleChange}
-            className='w-full px-3 py-2 mb-4 text-sm bg-transparent border rounded-lg appearance-none border-stone-50/30 focus:border-stone-400 focus:outline-none'
+            className='w-full px-3 py-2.5 text-sm bg-surface border rounded-lg appearance-none border-border text-text placeholder:text-text-muted focus:border-accent-amber focus:outline-none'
             rows='6'
           />
           {errors.message && (
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className='text-sm text-rose-800'
+              className='mt-1 text-sm text-rose-500'
             >
               {errors.message}
             </motion.p>
@@ -154,8 +157,8 @@ const Contact = () => {
 
         <button
           type='submit'
-          className={`mb-8 w-full rounded border border-stone-50 bg-stone-200 text-md px-4 py-2 font-bold text-stone-950 hover:bg-stone-300 
-          ${isSending ? " cursor-not-allowed opacity-50 hover:none" : ""}`}
+          className={`mb-8 w-full rounded-lg border border-accent-amber bg-accent-amber text-md px-4 py-2.5 font-mono font-medium text-surface hover:opacity-90 transition-opacity
+          ${isSending ? " cursor-not-allowed opacity-50 hover:opacity-50" : ""}`}
           disabled={isSending}
         >
           <div className='flex items-center justify-center gap-2'>
