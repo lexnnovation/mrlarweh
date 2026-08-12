@@ -33,7 +33,7 @@ import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
-import { TbSitemap, TbEye } from "react-icons/tb";
+import { TbSitemap, TbEye, TbApi } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
 
 export const NAVIGATION_LINKS = [
@@ -169,6 +169,7 @@ export const SKILLS = [
       { icon: <SiFastapi />, name: "FastAPI" },
       { icon: <SiLaravel />, name: "Laravel" },
       { icon: <SiPhp />, name: "PHP" },
+      { icon: <TbApi />, name: "REST APIs" },
     ],
   },
   {
