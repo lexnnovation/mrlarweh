@@ -4,6 +4,11 @@ Personal portfolio for **Alex T. Larweh** — AI Engineer / Software Engineer, b
 Ghana, currently an AI Automation Engineer at Kioobi SRL (Italy). Deployed at lexnnovation.com
 via Vercel (auto-deploys from `main`). Stack: React 18 + Vite, Tailwind CSS, Framer Motion, EmailJS.
 
+Public brand name on the site is **Alexander Teye** (hero name, nav/footer wordmark, page title) —
+a deliberate variation from the legal name used on resumes/IDs/LinkedIn. See `HERO.name` in
+`src/constants/index.jsx`. GitHub repo path, LinkedIn URL, and resume PDF filenames intentionally
+still reference "Larweh" since those are real external identifiers/documents.
+
 Audience: recruiters and businesses evaluating him for AI Engineer / Software Engineer roles.
 The site should read as evidence of technical craft, not just a list of claims.
 
@@ -18,10 +23,15 @@ The site should read as evidence of technical craft, not just a list of claims.
 - Two resumes exist because Alex is dual-positioning for AI Engineer and Software Engineer roles:
   - `public/resume/alex-larweh-ai-engineer-resume.pdf`
   - `public/resume/alex-larweh-software-engineer-resume.pdf`
-  - The site should let a visitor pick which one to download (nav + footer), not force one.
 - Resume PDFs are the source of truth for role titles, dates, and bullet content in
   `src/constants/index.jsx` (EXPERIENCES, SKILLS, EDUCATION, BIO). When the resumes are updated,
   reconcile the constants file against them.
+- **Resume download is currently disabled on purpose** — Alex doesn't want the PDFs publicly
+  downloadable while the portfolio URL is printed on his actual CV/resume. `RESUMES` (constants)
+  and `ResumeMenu.jsx` still exist and work, just aren't rendered anywhere; every spot that used to
+  show `<ResumeMenu />` (Navbar, Hero, Footer) now shows `<ContactCTA />` instead — a mailto link to
+  lex@lexnnovation.com ("Let's Talk"). To re-enable downloads later, swap `ContactCTA` back for
+  `ResumeMenu` at those three call sites.
 
 ## Project categorization rule
 

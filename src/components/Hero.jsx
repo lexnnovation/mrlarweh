@@ -1,7 +1,7 @@
 import { HERO } from "../constants";
 import { motion } from "framer-motion";
 import WindowCard from "./WindowCard";
-import ResumeMenu from "./ResumeMenu";
+import ContactCTA from "./ContactCTA";
 
 const STACK_LINES = [
   { tag: "Python", color: "text-accent-teal" },
@@ -42,7 +42,7 @@ const Hero = () => {
         </p>
 
         <div className='flex flex-wrap items-center gap-4 px-2'>
-          <ResumeMenu />
+          <ContactCTA />
           <a
             href='#projects'
             className='px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-border text-text hover:border-accent-teal hover:text-accent-teal'

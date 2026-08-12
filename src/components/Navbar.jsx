@@ -3,7 +3,7 @@ import { NAVIGATION_LINKS } from "../constants";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
-import ResumeMenu from "./ResumeMenu";
+import ContactCTA from "./ContactCTA";
 
 const NAV_NUMBER_COLORS = [
   "text-red-500",
@@ -67,7 +67,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className='flex items-center gap-3 shrink-0'>
-            <ResumeMenu />
+            <ContactCTA />
             <ThemeToggle />
           </div>
         </div>
@@ -127,7 +127,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className='flex justify-center px-6 pb-12'>
-              <ResumeMenu stacked />
+              <ContactCTA stacked />
             </div>
           </motion.div>
         )}

@@ -1,6 +1,6 @@
-import { SOCIAL_MEDIA_LINKS, RESUMES } from "../constants";
+import { SOCIAL_MEDIA_LINKS } from "../constants";
 import { motion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
+import ContactCTA from "./ContactCTA";
 
 const Footer = () => {
   function getYear() {
@@ -13,24 +13,7 @@ const Footer = () => {
           alexander<span className='text-accent-amber'>.</span>teye
         </a>
 
-        <div className='flex flex-wrap items-center justify-center gap-4'>
-          <a
-            href={RESUMES.aiEngineer}
-            download
-            className='flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-border text-text-muted hover:border-accent-teal hover:text-accent-teal'
-          >
-            <FiDownload />
-            AI Engineer Resume
-          </a>
-          <a
-            href={RESUMES.softwareEngineer}
-            download
-            className='flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-border text-text-muted hover:border-accent-teal hover:text-accent-teal'
-          >
-            <FiDownload />
-            Software Engineer Resume
-          </a>
-        </div>
+        <ContactCTA />
 
         <div className='flex items-center justify-center gap-5'>
           {SOCIAL_MEDIA_LINKS.map((link, index) => (
