@@ -16,7 +16,7 @@ const Projects = () => {
         transition={{ duration: 1 }}
         className='flex items-center gap-3 mb-4'
       >
-        <span className='font-mono text-lg text-accent-amber'>02.</span>
+        <span className='font-mono text-lg text-accent-amber'>1.</span>
         <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
           Projects
         </h2>

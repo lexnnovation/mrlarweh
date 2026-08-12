@@ -81,7 +81,7 @@ const Contact = () => {
         transition={{ duration: 1 }}
         className='flex items-center gap-3 mb-10'
       >
-        <span className='font-mono text-lg text-accent-amber'>06.</span>
+        <span className='font-mono text-lg text-accent-amber'>5.</span>
         <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
           Let&apos;s Connect
         </h2>

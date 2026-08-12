@@ -29,27 +29,25 @@ const Navbar = () => {
     <div>
       <nav className='fixed left-0 right-0 z-50 top-4 px-4'>
         {/* Desktop Menu */}
-        <div className='items-center justify-between hidden max-w-4xl gap-6 px-6 py-3 mx-auto border rounded-xl border-border bg-surface/80 backdrop-blur-lg lg:flex'>
-          <a href='#' className='font-mono text-lg font-medium text-text'>
+        <div className='items-center justify-between hidden max-w-6xl gap-6 px-6 py-3 mx-auto border rounded-xl border-border bg-surface/80 backdrop-blur-lg lg:flex'>
+          <a href='#' className='font-mono text-lg font-medium text-text shrink-0'>
             alex<span className='text-accent-amber'>.</span>larweh
           </a>
-          <ul className='flex items-center gap-5 font-mono text-sm'>
+          <ul className='flex items-center gap-4 font-mono text-sm shrink-0'>
             {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
+              <li key={index} className='whitespace-nowrap'>
                 <a
                   className='text-text-muted hover:text-accent-amber transition-colors'
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
-                  <span className='text-accent-teal'>
-                    0{index + 1}.
-                  </span>{" "}
+                  <span className='text-accent-amber'>{index}.</span>{" "}
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className='flex items-center gap-3'>
+          <div className='flex items-center gap-3 shrink-0'>
             <ResumeMenu />
             <ThemeToggle />
           </div>
@@ -82,7 +80,7 @@ const Navbar = () => {
                       className='block text-text'
                       onClick={(e) => handleLinkClick(e, item.href)}
                     >
-                      <span className='text-accent-teal'>0{index + 1}.</span>{" "}
+                      <span className='text-accent-amber'>{index}.</span>{" "}
                       {item.label}
                     </a>
                   </li>
