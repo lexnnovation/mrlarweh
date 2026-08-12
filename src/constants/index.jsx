@@ -53,10 +53,10 @@ export const RESUMES = {
 
 export const HERO = {
   name: "Alexander Teye",
-  greet: "Hello! I'm 👋🏻",
+  greet: "Hello! I'm",
   role: "AI Engineer & Software Engineer",
   description:
-    "I build AI-powered backend systems and full-stack products — from LLM-driven automation workflows to production web applications. 5+ years shipping code across Python/FastAPI, React, and PHP/Laravel, with a current focus on agentic systems, RAG pipelines, and workflow automation.",
+    "I build AI-powered systems and full-stack products. 5+ years building production software across Python, FastAPI, React, and Laravel. Currently focused on automation workflows, RAG pipelines, and backend systems that scale.",
 };
 
 export const PROJECTS = [
