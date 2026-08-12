@@ -7,9 +7,15 @@ const STACK_LINES = [
   { tag: "Python", color: "text-accent-teal" },
   { tag: "FastAPI", color: "text-accent-amber" },
   { tag: "OpenAI API", color: "text-accent-teal" },
-  { tag: "React", color: "text-accent-amber" },
+  { tag: "LangChain", color: "text-accent-amber" },
+  { tag: "React", color: "text-accent-teal" },
+  { tag: "Next.js", color: "text-accent-amber" },
+  { tag: "Laravel", color: "text-accent-teal" },
+  { tag: "PHP", color: "text-accent-amber" },
   { tag: "PostgreSQL", color: "text-accent-teal" },
-  { tag: "n8n", color: "text-accent-amber" },
+  { tag: "Supabase", color: "text-accent-amber" },
+  { tag: "n8n", color: "text-accent-teal" },
+  { tag: "Docker", color: "text-accent-amber" },
 ];
 
 const Hero = () => {
@@ -49,23 +55,30 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.5, x: 500 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className='flex flex-col justify-center w-full md:w-1/2 lg:p-8'
+        className='flex flex-col items-center justify-center w-full md:w-1/2 lg:p-8'
       >
-        <WindowCard title='~/stack.jsx'>
+        <WindowCard title='~/stack.jsx' className='w-full max-w-md'>
           <div className='p-6 font-mono text-sm leading-relaxed'>
-            <p className='text-text-muted'>
-              1&nbsp;&nbsp;<span className='text-accent-amber'>&lt;stack&gt;</span>
-            </p>
+            <div className='flex gap-4'>
+              <span className='w-4 text-right shrink-0 text-text-muted/50'>1</span>
+              <span className='text-accent-amber'>&lt;stack&gt;</span>
+            </div>
             {STACK_LINES.map((line, i) => (
-              <p key={line.tag} className='text-text-muted'>
-                {i + 2}&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={line.color}>&lt;{line.tag} /&gt;</span>
-              </p>
+              <div key={line.tag} className='flex gap-4'>
+                <span className='w-4 text-right shrink-0 text-text-muted/50'>
+                  {i + 2}
+                </span>
+                <span className={`pl-4 ${line.color}`}>
+                  &lt;{line.tag} /&gt;
+                </span>
+              </div>
             ))}
-            <p className='text-text-muted'>
-              {STACK_LINES.length + 2}&nbsp;&nbsp;
+            <div className='flex gap-4'>
+              <span className='w-4 text-right shrink-0 text-text-muted/50'>
+                {STACK_LINES.length + 2}
+              </span>
               <span className='text-accent-amber'>&lt;/stack&gt;</span>
-            </p>
+            </div>
           </div>
         </WindowCard>
       </motion.div>

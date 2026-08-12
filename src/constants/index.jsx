@@ -22,11 +22,15 @@ import {
   SiHuggingface,
   SiLangchain,
   SiVuedotjs,
+  SiTypescript,
+  SiPydantic,
 } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+import { TbSitemap } from "react-icons/tb";
+import { FaUserGroup } from "react-icons/fa6";
 
 export const NAVIGATION_LINKS = [
   { label: "Skills", href: "#skills" },
@@ -147,6 +151,9 @@ export const SKILLS = [
       { icon: <SiOpenai />, name: "OpenAI API" },
       { icon: <SiAnthropic />, name: "Claude" },
       { icon: <SiLangchain />, name: "LangChain" },
+      { icon: <TbSitemap />, name: "LangGraph" },
+      { icon: <FaUserGroup />, name: "CrewAI" },
+      { icon: <SiPydantic />, name: "Pydantic AI" },
       { icon: <SiHuggingface />, name: "Hugging Face" },
     ],
   },
@@ -168,6 +175,7 @@ export const SKILLS = [
       { icon: <RiNextjsFill />, name: "Next.js" },
       { icon: <SiVuedotjs />, name: "Vue.js" },
       { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <SiTypescript />, name: "TypeScript" },
       { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
     ],
   },
