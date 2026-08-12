@@ -27,9 +27,6 @@ const Education = () => {
           >
             <WindowCard title='~/education/gctu.json'>
               <div className='p-6'>
-                <p className='mb-2 font-mono text-xs text-accent-teal'>
-                  {edu.duration}
-                </p>
                 <h3 className='text-xl font-semibold text-text'>
                   {edu.degree}
                 </h3>
