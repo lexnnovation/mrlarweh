@@ -24,6 +24,8 @@ import {
   SiVuedotjs,
   SiTypescript,
   SiPydantic,
+  SiN8N,
+  SiZendesk,
 } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
@@ -192,8 +194,10 @@ export const SKILLS = [
     category: "Automation & Tools",
     file: "tools.json",
     items: [
+      { icon: <SiN8N />, name: "n8n" },
       { icon: <FaGitAlt />, name: "Git" },
       { icon: <SiDocker />, name: "Docker" },
+      { icon: <SiZendesk />, name: "Zendesk" },
       { icon: <FaWordpress />, name: "WordPress" },
       { icon: <FaShopify />, name: "Shopify" },
     ],
