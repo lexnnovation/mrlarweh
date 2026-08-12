@@ -15,7 +15,7 @@ export default {
         "accent-teal": "var(--accent-teal)",
       },
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
+        display: ["Onest", "sans-serif"],
         sans: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
         hero: ["Unbounded", "sans-serif"],
