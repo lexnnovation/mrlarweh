@@ -82,7 +82,7 @@ const Contact = () => {
         className='flex items-center gap-3 mb-10'
       >
         <span className='font-mono text-3xl lg:text-4xl text-accent-amber'>5.</span>
-        <h2 className='text-3xl font-semibold font-display lg:text-4xl'>
+        <h2 className='text-3xl font-extrabold font-display lg:text-4xl'>
           Let&apos;s Connect
         </h2>
       </motion.div>
