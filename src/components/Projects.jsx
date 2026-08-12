@@ -110,7 +110,7 @@ const Projects = () => {
                 rel='noopener noreferrer'
                 className='inline-flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-accent-amber text-accent-amber hover:bg-accent-amber hover:text-surface'
               >
-                View Website
+                View Project
                 <MdArrowOutward />
               </a>
             </div>

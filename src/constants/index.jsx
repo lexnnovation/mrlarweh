@@ -28,6 +28,7 @@ import {
   SiZendesk,
   SiHubspot,
   SiGoogleanalytics,
+  SiCloudflare,
 } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
@@ -64,11 +65,11 @@ export const PROJECTS = [
     type: "web",
     name: "Sports Prediction Hub (Enokay69.com)",
     description:
-      "I created Enokay69.com, a sports prediction platform offering free and VIP betting tips with features like user authentication, Telegram integration, and responsive design. The website was built using PHP Laravel for backend functionality and Bootstrap for a sleek, mobile-friendly front end. This combination ensures a scalable, secure, and user-focused experience.",
+      "I created Enokay69.com, a sports prediction platform offering free and VIP betting tips with features like user authentication, Telegram integration, and responsive design. The backend runs on PHP Laravel and MySQL, with a Next.js and Tailwind CSS frontend for a fast, mobile-friendly experience. This combination ensures a scalable, secure, and user-focused experience.",
     image: projectImage1,
     githubLink: "https://github.com/lexnnovation/k69_v2",
     liveSite: "https://www.enokay69.com/",
-    tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    tags: ["Next.js", "Laravel", "Tailwind CSS", "PHP", "MySQL"],
   },
   {
     id: 2,
@@ -128,7 +129,7 @@ export const PROJECTS = [
     description:
       "An AI email support system with FastAPI as the backend logic layer and n8n for workflow orchestration. Integrates OpenAI API processing, routing logic, and business-specific response validation to reduce manual response work and make support handling scalable. Validated through backend review, workflow checks, and production deployment testing.",
     githubLink: "https://github.com/lexnnovation",
-    tags: ["Python", "FastAPI", "n8n", "OpenAI API"],
+    tags: ["Python", "FastAPI", "n8n", "OpenAI API", "Google Cloud Console"],
   },
   {
     id: 8,
@@ -200,6 +201,7 @@ export const SKILLS = [
       { icon: <SiN8N />, name: "n8n" },
       { icon: <FaGitAlt />, name: "Git" },
       { icon: <SiDocker />, name: "Docker" },
+      { icon: <SiCloudflare />, name: "Cloudflare" },
       { icon: <SiZendesk />, name: "Zendesk" },
       { icon: <SiHubspot />, name: "HubSpot" },
       { icon: <SiGoogleanalytics />, name: "Google Analytics 4" },
