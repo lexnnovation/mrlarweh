@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NAVIGATION_LINKS } from "../constants";
 import { FaTimes, FaBars } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 import ResumeMenu from "./ResumeMenu";
 
@@ -17,6 +18,13 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -64,7 +72,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Header Bar */}
         <div className='rounded-xl border border-border bg-surface/90 backdrop-blur-md lg:hidden'>
           <div className='flex items-center justify-between px-4 py-3'>
             <a href='#' className='font-mono text-base font-medium text-text'>
@@ -81,29 +89,49 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-          {isMobileMenuOpen && (
-            <div className='px-4 pb-6'>
-              <ul className='flex flex-col gap-4 mb-6 font-mono text-base'>
-                {NAVIGATION_LINKS.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className='block text-text'
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                    >
-                      <span className={NAV_NUMBER_COLORS[index % NAV_NUMBER_COLORS.length]}>
-                        {index}.
-                      </span>{" "}
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <ResumeMenu stacked />
-            </div>
-          )}
         </div>
       </nav>
+
+      {/* Mobile Full-Screen Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className='fixed inset-0 z-40 flex flex-col bg-bg/90 backdrop-blur-xl lg:hidden'
+          >
+            <div className='h-24' />
+            <ul className='flex flex-col items-start flex-1 gap-8 px-8 pt-4 font-mono text-3xl'>
+              {NAVIGATION_LINKS.map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.06 }}
+                >
+                  <a
+                    href={item.href}
+                    className='text-text'
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                  >
+                    <span
+                      className={NAV_NUMBER_COLORS[index % NAV_NUMBER_COLORS.length]}
+                    >
+                      {index}.
+                    </span>{" "}
+                    {item.label}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+            <div className='flex justify-center px-6 pb-12'>
+              <ResumeMenu stacked />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
