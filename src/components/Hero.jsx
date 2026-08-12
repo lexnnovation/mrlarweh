@@ -55,7 +55,7 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.5, x: 500 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className='flex flex-col items-center justify-center w-full md:w-1/2 lg:p-8'
+        className='flex flex-col items-center justify-center w-full mt-12 md:w-1/2 lg:mt-0 lg:p-8'
       >
         <WindowCard title='~/stack.jsx' className='w-full max-w-md'>
           <div className='p-6 font-mono text-sm leading-relaxed'>
