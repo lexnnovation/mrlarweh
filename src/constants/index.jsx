@@ -114,13 +114,11 @@ export const PROJECTS = [
   {
     id: 6,
     type: "web",
-    name: "Portfolio Website",
+    name: "WhatsApp AI Receptionist",
     description:
-      "I built a portfolio website using ReactJS, Tailwind CSS, Framer Motion, and EmailJS. It features a modern, responsive design with smooth animations and an interactive user experience. The active contact form, powered by EmailJS, ensures seamless communication, while the site highlights my web development skills and projects.",
+      "Landing page for the AI WhatsApp Receptionist product, built with Next.js and Tailwind CSS. Introduces the assistant, its automated-reply and customer-service capabilities, and its business workflow automation features.",
     image: projectImage6,
-    githubLink: "https://github.com/lexnnovation/mrlarweh",
-    liveSite: "https://lexnnovation.com",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    tags: ["Next.js", "Tailwind CSS"],
   },
   {
     id: 7,

@@ -104,15 +104,17 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.liveSite}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-accent-amber text-accent-amber hover:bg-accent-amber hover:text-surface'
-              >
-                View Project
-                <MdArrowOutward />
-              </a>
+              {project.liveSite && (
+                <a
+                  href={project.liveSite}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border rounded-lg border-accent-amber text-accent-amber hover:bg-accent-amber hover:text-surface'
+                >
+                  View Project
+                  <MdArrowOutward />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
