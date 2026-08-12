@@ -20,7 +20,7 @@ const STACK_LINES = [
 
 const Hero = () => {
   return (
-    <section className='flex flex-wrap items-center min-h-[95vh] lg:min-h-0 lg:pt-20 lg:pb-28'>
+    <section className='flex flex-wrap items-center min-h-[95vh] lg:min-h-[76vh] lg:pt-12 lg:pb-0'>
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
