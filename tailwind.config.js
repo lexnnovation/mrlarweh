@@ -18,6 +18,7 @@ export default {
         display: ["Space Grotesk", "sans-serif"],
         sans: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
+        hero: ["Unbounded", "sans-serif"],
       },
     },
   },
