@@ -26,12 +26,14 @@ import {
   SiPydantic,
   SiN8N,
   SiZendesk,
+  SiHubspot,
+  SiGoogleanalytics,
 } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
-import { TbSitemap } from "react-icons/tb";
+import { TbSitemap, TbEye } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
 
 export const NAVIGATION_LINKS = [
@@ -198,6 +200,9 @@ export const SKILLS = [
       { icon: <FaGitAlt />, name: "Git" },
       { icon: <SiDocker />, name: "Docker" },
       { icon: <SiZendesk />, name: "Zendesk" },
+      { icon: <SiHubspot />, name: "HubSpot" },
+      { icon: <SiGoogleanalytics />, name: "Google Analytics 4" },
+      { icon: <TbEye />, name: "Microsoft Clarity" },
       { icon: <FaWordpress />, name: "WordPress" },
       { icon: <FaShopify />, name: "Shopify" },
     ],
