@@ -47,7 +47,7 @@ const Bio = () => {
           <WindowCard title='~/about/alex-professional.jpg'>
             <img
               src={lexImg}
-              alt='Alex Larweh'
+              alt='Alexander Teye'
               className='object-cover w-full h-80 lg:h-96'
             />
           </WindowCard>

@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className='items-center justify-between hidden max-w-6xl gap-6 px-6 py-3 mx-auto border rounded-xl border-border bg-surface/80 backdrop-blur-lg lg:flex'>
           <a href='#' className='font-mono text-lg font-medium text-text shrink-0'>
-            alex<span className='text-accent-amber'>.</span>larweh
+            alex<span className='text-accent-amber'>.</span>teye
           </a>
           <ul className='flex items-center gap-4 font-mono text-sm shrink-0'>
             {NAVIGATION_LINKS.map((item, index) => (
@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className='rounded-xl border border-border bg-surface/90 backdrop-blur-md lg:hidden'>
           <div className='flex items-center justify-between px-4 py-3'>
             <a href='#' className='font-mono text-base font-medium text-text'>
-              alex<span className='text-accent-amber'>.</span>larweh
+              alex<span className='text-accent-amber'>.</span>teye
             </a>
             <div className='flex items-center gap-2'>
               <ThemeToggle />

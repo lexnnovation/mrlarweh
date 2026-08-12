@@ -47,7 +47,7 @@ export const RESUMES = {
 };
 
 export const HERO = {
-  name: "ALEXANDER LARWEH",
+  name: "ALEXANDER TEYE",
   greet: "Hello! I'm 👋🏻",
   role: "AI Engineer & Software Engineer",
   description:

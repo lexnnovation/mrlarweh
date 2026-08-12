@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='w-full max-w-5xl pt-16 mt-8 border-t border-border'>
       <div className='flex flex-col items-center gap-6 py-10'>
         <a href='#' className='font-mono text-lg font-medium text-text'>
-          alex<span className='text-accent-amber'>.</span>larweh
+          alex<span className='text-accent-amber'>.</span>teye
         </a>
 
         <div className='flex flex-wrap items-center justify-center gap-4'>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <p className='text-sm tracking-wide text-text-muted'>
-          &copy; Alex Larweh. All rights reserved {getYear()}.
+          &copy; Alexander Teye. All rights reserved {getYear()}.
         </p>
       </div>
     </div>
