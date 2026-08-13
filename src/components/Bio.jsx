@@ -48,7 +48,7 @@ const Bio = () => {
             <img
               src={lexImg}
               alt='Alexander Teye'
-              className='object-cover w-full h-80 lg:h-96'
+              className='w-full aspect-square object-cover'
             />
           </WindowCard>
         </motion.div>
