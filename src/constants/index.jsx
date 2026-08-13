@@ -118,6 +118,7 @@ export const PROJECTS = [
     description:
       "Landing page for the AI WhatsApp Receptionist product, built with Next.js and Tailwind CSS. Introduces the assistant, its automated-reply and customer-service capabilities, and its business workflow automation features.",
     image: projectImage6,
+    liveSite: "https://www.lexnnovation.com/",
     tags: ["Next.js", "Tailwind CSS"],
   },
   {

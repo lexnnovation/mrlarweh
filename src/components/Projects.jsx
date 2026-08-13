@@ -80,7 +80,7 @@ const Projects = () => {
             key={project.id}
             className='overflow-hidden border rounded-xl border-border bg-surface group'
           >
-            <div className='relative overflow-hidden aspect-square'>
+            <div className='relative overflow-hidden aspect-[3/2]'>
               <img
                 src={project.image}
                 alt={project.name}
