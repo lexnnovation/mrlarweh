@@ -100,10 +100,10 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className='fixed inset-0 z-40 flex flex-col bg-bg/90 backdrop-blur-xl lg:hidden'
+            className='fixed inset-0 z-40 flex flex-col overflow-y-auto bg-bg/90 backdrop-blur-xl lg:hidden'
           >
-            <div className='h-24' />
-            <ul className='flex flex-col items-start flex-1 gap-8 px-8 pt-4 font-mono text-3xl'>
+            <div className='h-24 shrink-0 landscape:h-16' />
+            <ul className='flex flex-col items-start flex-1 gap-8 px-8 pt-4 font-mono text-3xl landscape:gap-3 landscape:text-xl'>
               {NAVIGATION_LINKS.map((item, index) => (
                 <motion.li
                   key={index}
@@ -126,7 +126,7 @@ const Navbar = () => {
                 </motion.li>
               ))}
             </ul>
-            <div className='flex justify-center px-6 pb-12'>
+            <div className='flex justify-center px-6 py-8 shrink-0 landscape:py-4'>
               <ContactCTA stacked />
             </div>
           </motion.div>
