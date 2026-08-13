@@ -17,6 +17,11 @@ The site should read as evidence of technical craft, not just a list of claims.
 - Feature work happens on branches (e.g. `redesign/modern-portfolio-v2`), never directly on `main`.
 - `main` is what Vercel deploys — only merge once a change has been reviewed and looks right
   in the browser at desktop + mobile widths.
+- **"Push" means push the feature branch, not `main`.** Vercel deploys a preview URL per active
+  branch. The flow is: push to the feature branch → Alex tests it on that branch's Vercel preview
+  link → he explicitly instructs merging to `main` once he's happy with it. Never merge/push
+  `main` on a bare "push," and don't infer permission from "it works" alone — wait for Alex to
+  actually say to merge/push to `main`.
 
 ## Content sources of truth
 
